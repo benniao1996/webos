@@ -27,6 +27,13 @@
 ```
   docker run -it --name helloworld1 -d  junjun16818/hello-world
   docker run -it -d  --name webos  -p 8119:8119  junjun16818/webos:0.1
+  
+  
+  //config docker remote api 
+  nano /lib/systemd/system/docker.service 
+  ExecStart=/usr/bin/dockerd -H unix:///var/run/docker.sock -H tcp://0.0.0.0:5678
+  sudo systemctl restart docker
+  
   http://localhost:8119/#/desktop/{{docker_host}}/helloworld
 ```
 
