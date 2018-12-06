@@ -34,7 +34,7 @@
   ExecStart=/usr/bin/dockerd -H unix:///var/run/docker.sock -H tcp://0.0.0.0:5678
   sudo systemctl restart docker
   
-  http://localhost:8119/#/desktop/{{docker_host}}/helloworld
+  http://localhost:8119/#/desktop/${host}:5678/helloworld
 ```
 
 # demo (please use chrome open it!)
